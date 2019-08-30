@@ -72,7 +72,7 @@ def ESRGAN(model_path,DEVice,FolderIN,FolderOUT,format1):
     for root, dirs, files in os.walk(FolderIN):
         for file in files:
             #check file extention
-            if file.lower().endswith(format1.lower())
+            if file.lower().endswith(format1.lower()):
                 # add 1 to index:
                 idx += 1
                 #print file name and number

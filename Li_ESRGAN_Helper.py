@@ -33,7 +33,7 @@ SplitSize = 255
 #main program
 if os.path.exists('./Done.xao') != True:
     #Get Temp folder paths
-    MidFldrs = ESRGAN_Helper.TmpFS(0,TmpFSParent)
+    MidFldrs = ESRGAN_Helper.TmpFS_Make(TmpFSParent)
     SplitFolder = MidFldrs[0]  
     SplitUpscaleFolder = MidFldrs[1]
     JoinRowFolder = MidFldrs[2]
@@ -64,7 +64,7 @@ if os.path.exists('./Done.xao') != True:
     #Check Clear TmpFS Setting
     if ClearTmpFS == 1:
         #clear Temp folders
-        ESRGAN_Helper.TmpFS(1,TmpFSParent)
+        ESRGAN_Helper.TmpFS_Clean(1,TmpFSParent)
     f = open('./Done.xao','w+')
     f.close()
 #cleanup
